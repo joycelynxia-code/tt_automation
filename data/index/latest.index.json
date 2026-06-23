@@ -1,0 +1,852 @@
+[
+  {
+    "canonicalPath": "taxpayer.firstName",
+    "label": "first Name",
+    "value": "Alex",
+    "group": "TAXPAYER",
+    "semanticType": "name",
+    "aliases": [
+      "first Name",
+      "firstName",
+      "taxpayer.firstName",
+      "first name"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.lastName",
+    "label": "last Name",
+    "value": "Appleseed",
+    "group": "TAXPAYER",
+    "semanticType": "name",
+    "aliases": [
+      "last Name",
+      "lastName",
+      "taxpayer.lastName",
+      "last name"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.filingStatus",
+    "label": "filing Status",
+    "value": "SINGLE",
+    "group": "TAXPAYER",
+    "semanticType": "other",
+    "aliases": [
+      "filing Status",
+      "filingStatus",
+      "taxpayer.filingStatus"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.birthDate",
+    "label": "birth Date",
+    "value": "1994-09-23",
+    "group": "TAXPAYER",
+    "semanticType": "date",
+    "aliases": [
+      "birth Date",
+      "birthDate",
+      "taxpayer.birthDate",
+      "date of birth",
+      "dob"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.ssn",
+    "label": "ssn",
+    "value": "447865205",
+    "group": "TAXPAYER",
+    "semanticType": "id",
+    "aliases": [
+      "ssn",
+      "taxpayer.ssn"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.occupation",
+    "label": "occupation",
+    "value": "Employee",
+    "group": "TAXPAYER",
+    "semanticType": "other",
+    "aliases": [
+      "occupation",
+      "taxpayer.occupation"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.email",
+    "label": "email",
+    "value": "taxpayer@example.com",
+    "group": "TAXPAYER",
+    "semanticType": "other",
+    "aliases": [
+      "email",
+      "taxpayer.email"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.address.line1",
+    "label": "line1",
+    "value": "1342 Advent Ave",
+    "group": "TAXPAYER",
+    "semanticType": "address",
+    "aliases": [
+      "line1",
+      "taxpayer.address.line1"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.address.city",
+    "label": "city",
+    "value": "San Leandro",
+    "group": "TAXPAYER",
+    "semanticType": "address",
+    "aliases": [
+      "city",
+      "taxpayer.address.city"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.address.state",
+    "label": "state",
+    "value": "CA",
+    "group": "TAXPAYER",
+    "semanticType": "address",
+    "aliases": [
+      "state",
+      "taxpayer.address.state"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.address.zip",
+    "label": "zip",
+    "value": "94549",
+    "group": "TAXPAYER",
+    "semanticType": "address",
+    "aliases": [
+      "zip",
+      "taxpayer.address.zip",
+      "zip code",
+      "postal code"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.address.county",
+    "label": "county",
+    "value": "STATE_CA_ALAMEDA",
+    "group": "TAXPAYER",
+    "semanticType": "address",
+    "aliases": [
+      "county",
+      "taxpayer.address.county"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.address.country",
+    "label": "country",
+    "value": "US",
+    "group": "TAXPAYER",
+    "semanticType": "address",
+    "aliases": [
+      "country",
+      "taxpayer.address.country"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.canBeClaimedAsDependent",
+    "label": "can Be Claimed As Dependent",
+    "value": false,
+    "group": "TAXPAYER",
+    "semanticType": "boolean",
+    "aliases": [
+      "can Be Claimed As Dependent",
+      "canBeClaimedAsDependent",
+      "taxpayer.canBeClaimedAsDependent"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.isBlind",
+    "label": "is Blind",
+    "value": false,
+    "group": "TAXPAYER",
+    "semanticType": "boolean",
+    "aliases": [
+      "is Blind",
+      "isBlind",
+      "taxpayer.isBlind"
+    ]
+  },
+  {
+    "canonicalPath": "taxpayer.isMilitary",
+    "label": "is Military",
+    "value": false,
+    "group": "TAXPAYER",
+    "semanticType": "boolean",
+    "aliases": [
+      "is Military",
+      "isMilitary",
+      "taxpayer.isMilitary"
+    ]
+  },
+  {
+    "canonicalPath": "federal.healthCoverageAllYear",
+    "label": "health Coverage All Year",
+    "value": true,
+    "group": "TAXPAYER",
+    "semanticType": "boolean",
+    "aliases": [
+      "health Coverage All Year",
+      "healthCoverageAllYear",
+      "federal.healthCoverageAllYear"
+    ]
+  },
+  {
+    "canonicalPath": "federal.priorYearAgi",
+    "label": "prior Year Agi",
+    "value": "97922",
+    "group": "TAXPAYER",
+    "semanticType": "other",
+    "aliases": [
+      "prior Year Agi",
+      "priorYearAgi",
+      "federal.priorYearAgi"
+    ]
+  },
+  {
+    "canonicalPath": "federal.identityProtectionPinUsed",
+    "label": "identity Protection Pin Used",
+    "value": false,
+    "group": "TAXPAYER",
+    "semanticType": "boolean",
+    "aliases": [
+      "identity Protection Pin Used",
+      "identityProtectionPinUsed",
+      "federal.identityProtectionPinUsed"
+    ]
+  },
+  {
+    "canonicalPath": "deductionsCredits.studentLoanInterestPaid",
+    "label": "student Loan Interest Paid",
+    "value": 144.75,
+    "group": "DEDUCTIONS",
+    "semanticType": "id",
+    "aliases": [
+      "student Loan Interest Paid",
+      "studentLoanInterestPaid",
+      "deductionsCredits.studentLoanInterestPaid"
+    ]
+  },
+  {
+    "canonicalPath": "deductionsCredits.rothIraContribution",
+    "label": "roth Ira Contribution",
+    "value": 800,
+    "group": "DEDUCTIONS",
+    "semanticType": "amount",
+    "aliases": [
+      "roth Ira Contribution",
+      "rothIraContribution",
+      "deductionsCredits.rothIraContribution"
+    ]
+  },
+  {
+    "canonicalPath": "deductionsCredits.yearEndRothIraValue",
+    "label": "year End Roth Ira Value",
+    "value": 20288.09,
+    "group": "DEDUCTIONS",
+    "semanticType": "amount",
+    "aliases": [
+      "year End Roth Ira Value",
+      "yearEndRothIraValue",
+      "deductionsCredits.yearEndRothIraValue"
+    ]
+  },
+  {
+    "canonicalPath": "deductionsCredits.hasPriorYearRothExcessContributions",
+    "label": "has Prior Year Roth Excess Contributions",
+    "value": false,
+    "group": "DEDUCTIONS",
+    "semanticType": "boolean",
+    "aliases": [
+      "has Prior Year Roth Excess Contributions",
+      "hasPriorYearRothExcessContributions",
+      "deductionsCredits.hasPriorYearRothExcessContributions"
+    ]
+  },
+  {
+    "canonicalPath": "state.stateNexus[0]",
+    "label": "state Nexus[0]",
+    "value": "CA",
+    "group": "STATE",
+    "semanticType": "address",
+    "aliases": [
+      "state Nexus[0]",
+      "stateNexus[0]",
+      "state.stateNexus[0]"
+    ]
+  },
+  {
+    "canonicalPath": "state.primaryResidenceState",
+    "label": "primary Residence State",
+    "value": "CA",
+    "group": "STATE",
+    "semanticType": "address",
+    "aliases": [
+      "primary Residence State",
+      "primaryResidenceState",
+      "state.primaryResidenceState"
+    ]
+  },
+  {
+    "canonicalPath": "state.primaryResidenceCounty",
+    "label": "primary Residence County",
+    "value": "STATE_CA_ALAMEDA",
+    "group": "STATE",
+    "semanticType": "address",
+    "aliases": [
+      "primary Residence County",
+      "primaryResidenceCounty",
+      "state.primaryResidenceCounty"
+    ]
+  },
+  {
+    "canonicalPath": "state.california.qualifiesForRentersCredit",
+    "label": "qualifies For Renters Credit",
+    "value": true,
+    "group": "STATE",
+    "semanticType": "boolean",
+    "aliases": [
+      "qualifies For Renters Credit",
+      "qualifiesForRentersCredit",
+      "state.california.qualifiesForRentersCredit"
+    ]
+  },
+  {
+    "canonicalPath": "state.california.optedInForHealthcareInfo",
+    "label": "opted In For Healthcare Info",
+    "value": false,
+    "group": "STATE",
+    "semanticType": "boolean",
+    "aliases": [
+      "opted In For Healthcare Info",
+      "optedInForHealthcareInfo",
+      "state.california.optedInForHealthcareInfo"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.payerName",
+    "label": "Sample Bank payer Name",
+    "value": "Sample Bank",
+    "group": "1099_INT",
+    "semanticType": "name",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank payer Name",
+      "payerName",
+      "documents[0].fields.payerName",
+      "payer name"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.payerTin",
+    "label": "Sample Bank payer Tin",
+    "value": "105933234",
+    "group": "1099_INT",
+    "semanticType": "id",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank payer Tin",
+      "payerTin",
+      "documents[0].fields.payerTin",
+      "payer tin",
+      "federal identification number"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.payerAddressLine1",
+    "label": "Sample Bank payer Address Line1",
+    "value": "PO BOX 951",
+    "group": "1099_INT",
+    "semanticType": "address",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank payer Address Line1",
+      "payerAddressLine1",
+      "documents[0].fields.payerAddressLine1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.payerAddressCity",
+    "label": "Sample Bank payer Address City",
+    "value": "HORSHAM",
+    "group": "1099_INT",
+    "semanticType": "address",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank payer Address City",
+      "payerAddressCity",
+      "documents[0].fields.payerAddressCity"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.payerAddressState",
+    "label": "Sample Bank payer Address State",
+    "value": "PA",
+    "group": "1099_INT",
+    "semanticType": "address",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank payer Address State",
+      "payerAddressState",
+      "documents[0].fields.payerAddressState"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.payerAddressZip",
+    "label": "Sample Bank payer Address Zip",
+    "value": "19044",
+    "group": "1099_INT",
+    "semanticType": "address",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank payer Address Zip",
+      "payerAddressZip",
+      "documents[0].fields.payerAddressZip",
+      "zip code",
+      "postal code"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.box1InterestIncome",
+    "label": "Sample Bank box1Interest Income",
+    "value": 61.82,
+    "group": "1099_INT",
+    "semanticType": "id",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank box1Interest Income",
+      "box1InterestIncome",
+      "documents[0].fields.box1InterestIncome",
+      "box 1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[0].fields.box4FederalWithholding",
+    "label": "Sample Bank box4Federal Withholding",
+    "value": 0,
+    "group": "1099_INT",
+    "semanticType": "amount",
+    "docType": "1099_INT",
+    "docId": "1099_int_1",
+    "docLabel": "Sample Bank",
+    "aliases": [
+      "Sample Bank box4Federal Withholding",
+      "box4FederalWithholding",
+      "documents[0].fields.box4FederalWithholding",
+      "box 4"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.employerName",
+    "label": "SAMPLE EMPLOYER INC employer Name",
+    "value": "SAMPLE EMPLOYER INC",
+    "group": "W2",
+    "semanticType": "name",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC employer Name",
+      "employerName",
+      "documents[1].fields.employerName",
+      "employer name"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.employerEin",
+    "label": "SAMPLE EMPLOYER INC employer Ein",
+    "value": "853309559",
+    "group": "W2",
+    "semanticType": "id",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC employer Ein",
+      "employerEin",
+      "documents[1].fields.employerEin",
+      "employer identification number",
+      "ein"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.employerAddressLine1",
+    "label": "SAMPLE EMPLOYER INC employer Address Line1",
+    "value": "246 N ABEL ST",
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC employer Address Line1",
+      "employerAddressLine1",
+      "documents[1].fields.employerAddressLine1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.employerAddressCity",
+    "label": "SAMPLE EMPLOYER INC employer Address City",
+    "value": "MILPITAS",
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC employer Address City",
+      "employerAddressCity",
+      "documents[1].fields.employerAddressCity"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.employerAddressState",
+    "label": "SAMPLE EMPLOYER INC employer Address State",
+    "value": "CA",
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC employer Address State",
+      "employerAddressState",
+      "documents[1].fields.employerAddressState"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.employerAddressZip",
+    "label": "SAMPLE EMPLOYER INC employer Address Zip",
+    "value": "95035",
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC employer Address Zip",
+      "employerAddressZip",
+      "documents[1].fields.employerAddressZip",
+      "zip code",
+      "postal code"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box1Wages",
+    "label": "SAMPLE EMPLOYER INC box1Wages",
+    "value": 21087.17,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box1Wages",
+      "box1Wages",
+      "documents[1].fields.box1Wages",
+      "box 1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box2FederalWithholding",
+    "label": "SAMPLE EMPLOYER INC box2Federal Withholding",
+    "value": 1696.37,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box2Federal Withholding",
+      "box2FederalWithholding",
+      "documents[1].fields.box2FederalWithholding",
+      "box 2"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box3SocialSecurityWages",
+    "label": "SAMPLE EMPLOYER INC box3Social Security Wages",
+    "value": 10594.61,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box3Social Security Wages",
+      "box3SocialSecurityWages",
+      "documents[1].fields.box3SocialSecurityWages",
+      "box 3"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box4SocialSecurityTaxWithheld",
+    "label": "SAMPLE EMPLOYER INC box4Social Security Tax Withheld",
+    "value": 1307.39,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box4Social Security Tax Withheld",
+      "box4SocialSecurityTaxWithheld",
+      "documents[1].fields.box4SocialSecurityTaxWithheld",
+      "box 4"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box5MedicareWages",
+    "label": "SAMPLE EMPLOYER INC box5Medicare Wages",
+    "value": 21087.17,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box5Medicare Wages",
+      "box5MedicareWages",
+      "documents[1].fields.box5MedicareWages",
+      "box 5"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box6MedicareTaxWithheld",
+    "label": "SAMPLE EMPLOYER INC box6Medicare Tax Withheld",
+    "value": 305.76,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box6Medicare Tax Withheld",
+      "box6MedicareTaxWithheld",
+      "documents[1].fields.box6MedicareTaxWithheld",
+      "box 6"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box7SocialSecurityTips",
+    "label": "SAMPLE EMPLOYER INC box7Social Security Tips",
+    "value": 10492.56,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box7Social Security Tips",
+      "box7SocialSecurityTips",
+      "documents[1].fields.box7SocialSecurityTips"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box8AllocatedTips",
+    "label": "SAMPLE EMPLOYER INC box8Allocated Tips",
+    "value": 0,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box8Allocated Tips",
+      "box8AllocatedTips",
+      "documents[1].fields.box8AllocatedTips"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box10DependentCareBenefits",
+    "label": "SAMPLE EMPLOYER INC box10Dependent Care Benefits",
+    "value": 0,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box10Dependent Care Benefits",
+      "box10DependentCareBenefits",
+      "documents[1].fields.box10DependentCareBenefits",
+      "box 1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box11NonqualifiedPlans",
+    "label": "SAMPLE EMPLOYER INC box11Nonqualified Plans",
+    "value": 0,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC box11Nonqualified Plans",
+      "box11NonqualifiedPlans",
+      "documents[1].fields.box11NonqualifiedPlans",
+      "box 1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.isRetirementPlan",
+    "label": "SAMPLE EMPLOYER INC is Retirement Plan",
+    "value": false,
+    "group": "W2",
+    "semanticType": "boolean",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC is Retirement Plan",
+      "isRetirementPlan",
+      "documents[1].fields.isRetirementPlan"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.isStatutoryEmployee",
+    "label": "SAMPLE EMPLOYER INC is Statutory Employee",
+    "value": false,
+    "group": "W2",
+    "semanticType": "boolean",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC is Statutory Employee",
+      "isStatutoryEmployee",
+      "documents[1].fields.isStatutoryEmployee"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.isThirdPartySickPay",
+    "label": "SAMPLE EMPLOYER INC is Third Party Sick Pay",
+    "value": false,
+    "group": "W2",
+    "semanticType": "boolean",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC is Third Party Sick Pay",
+      "isThirdPartySickPay",
+      "documents[1].fields.isThirdPartySickPay"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box14[0].amount",
+    "label": "SAMPLE EMPLOYER INC amount",
+    "value": 253.04,
+    "group": "W2",
+    "semanticType": "amount",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC amount",
+      "amount",
+      "documents[1].fields.box14[0].amount",
+      "box 1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.box14[0].description",
+    "label": "SAMPLE EMPLOYER INC description",
+    "value": "CASDI",
+    "group": "W2",
+    "semanticType": "other",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC description",
+      "description",
+      "documents[1].fields.box14[0].description",
+      "box 1"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.stateInfo[0].state_tax_withheld",
+    "label": "SAMPLE EMPLOYER INC state tax withheld",
+    "value": 348.12,
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC state tax withheld",
+      "state_tax_withheld",
+      "documents[1].fields.stateInfo[0].state_tax_withheld"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.stateInfo[0].state_amount",
+    "label": "SAMPLE EMPLOYER INC state amount",
+    "value": 21087.17,
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC state amount",
+      "state_amount",
+      "documents[1].fields.stateInfo[0].state_amount"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.stateInfo[0].state",
+    "label": "SAMPLE EMPLOYER INC state",
+    "value": "CA",
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC state",
+      "state",
+      "documents[1].fields.stateInfo[0].state"
+    ]
+  },
+  {
+    "canonicalPath": "documents[1].fields.stateInfo[0].issuer_state_id_number",
+    "label": "SAMPLE EMPLOYER INC issuer state id number",
+    "value": "62117520",
+    "group": "W2",
+    "semanticType": "address",
+    "docType": "W2",
+    "docId": "w2_1",
+    "docLabel": "SAMPLE EMPLOYER INC",
+    "aliases": [
+      "SAMPLE EMPLOYER INC issuer state id number",
+      "issuer_state_id_number",
+      "documents[1].fields.stateInfo[0].issuer_state_id_number"
+    ]
+  }
+]

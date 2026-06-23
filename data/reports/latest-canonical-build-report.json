@@ -1,0 +1,18 @@
+{
+  "createdAt": "2026-06-23T18:22:51.455Z",
+  "outputPath": "canonical_data.json",
+  "documentCount": 2,
+  "documents": [
+    {
+      "type": "1099_INT",
+      "id": "1099_int_1",
+      "label": "Sample Bank"
+    },
+    {
+      "type": "W2",
+      "id": "w2_1",
+      "label": "SAMPLE EMPLOYER INC"
+    }
+  ],
+  "unmappedSourceSections": []
+}

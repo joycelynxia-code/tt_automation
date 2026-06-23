@@ -1,0 +1,38 @@
+{
+  "mappingId": "page.W2:d6539cf.1017cc7",
+  "status": "approved",
+  "pageSignature": "W2:d6539cf",
+  "pageContext": {
+    "group": "W2",
+    "confidence": 0.95,
+    "reason": "Detected W2 markers; score=4"
+  },
+  "createdAt": "2026-06-23T19:25:39.207Z",
+  "matches": [
+    {
+      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID | ##-#######",
+      "pageFieldKey": "box b employer identification number ein or federal id",
+      "canonicalPath": "documents[1].fields.employerEin"
+    },
+    {
+      "pageLabel": "Box c - Employer name",
+      "pageFieldKey": "box c employer name",
+      "canonicalPath": "documents[1].fields.employerName"
+    },
+        {
+      "pageLabel": "Address",
+      "pageFieldKey": "Address",
+      "canonicalPath": "documents[1].fields.employerAddressLine1"
+    },
+    {
+      "pageLabel": "ZIP code",
+      "pageFieldKey": "zip code",
+      "canonicalPath": "documents[1].fields.employerAddressZip"
+    },
+    {
+      "pageLabel": "State | State | — Select a state —AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyoming",
+      "pageFieldKey": "state state select a state alabamaalaskaarizonaarkansascaliforniacoloradoconnecticutdelawaredistrict of columbiafloridageorgiahawaiiidahoillinoisindianaiowakansaskentuckylouisianamainemarylandmassachusettsmichiganminnesotamississippimissourimontananebraskanevadanew hampshirenew jerseynew mexiconew yorknorth carolinanorth dakotaohiooklahomaoregonpennsylvaniarhode islandsouth carolinasouth dakotatennesseetexasutahvermontvirginiawashingtonwest virginiawisconsinwyoming",
+      "canonicalPath": "documents[1].fields.stateInfo[0].state"
+    }
+  ]
+}

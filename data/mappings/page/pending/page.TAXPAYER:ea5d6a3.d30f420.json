@@ -1,0 +1,53 @@
+{
+  "mappingId": "page.TAXPAYER:ea5d6a3.d30f420",
+  "status": "pending",
+  "pageSignature": "TAXPAYER:ea5d6a3",
+  "pageContext": {
+    "group": "TAXPAYER",
+    "confidence": 0.95,
+    "reason": "Detected TAXPAYER markers; score=4"
+  },
+  "createdAt": "2026-06-23T20:42:30.260Z",
+  "matches": [
+    {
+      "pageLabel": "First name",
+      "pageFieldKey": "first name",
+      "canonicalPath": "taxpayer.firstName"
+    },
+    {
+      "pageLabel": "Last name",
+      "pageFieldKey": "last name",
+      "canonicalPath": "taxpayer.lastName"
+    },
+    {
+      "pageLabel": "Date of birth",
+      "pageFieldKey": "date of birth",
+      "canonicalPath": "taxpayer.birthDate"
+    },
+    {
+      "pageLabel": "Type of mailing address | Type of mailing address | — Select —U.S. addressMilitary (APO, FPO, or DPO)U.S. territoryForeign country",
+      "pageFieldKey": "type of mailing address type of mailing address select u s addressmilitary apo fpo or dpo u s territoryforeign country",
+      "canonicalPath": "taxpayer.address.country"
+    },
+    {
+      "pageLabel": "Address",
+      "pageFieldKey": "address",
+      "canonicalPath": "taxpayer.address.line1"
+    },
+    {
+      "pageLabel": "City",
+      "pageFieldKey": "city",
+      "canonicalPath": "taxpayer.address.city"
+    },
+    {
+      "pageLabel": "State | State | — Select —AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyoming",
+      "pageFieldKey": "state state select alabamaalaskaarizonaarkansascaliforniacoloradoconnecticutdelawaredistrict of columbiafloridageorgiahawaiiidahoillinoisindianaiowakansaskentuckylouisianamainemarylandmassachusettsmichiganminnesotamississippimissourimontananebraskanevadanew hampshirenew jerseynew mexiconew yorknorth carolinanorth dakotaohiooklahomaoregonpennsylvaniarhode islandsouth carolinasouth dakotatennesseetexasutahvermontvirginiawashingtonwest virginiawisconsinwyoming",
+      "canonicalPath": "taxpayer.address.state"
+    },
+    {
+      "pageLabel": "ZIP code",
+      "pageFieldKey": "zip code",
+      "canonicalPath": "taxpayer.address.zip"
+    }
+  ]
+}

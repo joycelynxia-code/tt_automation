@@ -1,0 +1,48 @@
+{
+  "mappingId": "page.W2:3d22f55.cf8b9bd",
+  "status": "approved",
+  "pageSignature": "W2:3d22f55",
+  "pageContext": {
+    "group": "W2",
+    "confidence": 0.95,
+    "reason": "Detected W2 markers; score=6"
+  },
+  "createdAt": "2026-06-23T18:46:35.210Z",
+  "matches": [
+    {
+      "pageLabel": "Box 1 - Wages, tips, other compensation | $",
+      "pageFieldKey": "box 1 wages tips other compensation",
+      "canonicalPath": "documents[1].fields.box1Wages"
+    },
+    {
+      "pageLabel": "Box 2 - Federal income tax withheld | $",
+      "pageFieldKey": "box 2 federal income tax withheld",
+      "canonicalPath": "documents[1].fields.box2FederalWithholding"
+    },
+    {
+      "pageLabel": "Box 3 - Social Security wages | $",
+      "pageFieldKey": "box 3 social security wages",
+      "canonicalPath": "documents[1].fields.box3SocialSecurityWages"
+    },
+    {
+      "pageLabel": "Box 4 - Social Security tax withheld | $",
+      "pageFieldKey": "box 4 social security tax withheld",
+      "canonicalPath": "documents[1].fields.box4SocialSecurityTaxWithheld"
+    },
+    {
+      "pageLabel": "Box 5 - Medicare wages and tips | $",
+      "pageFieldKey": "box 5 medicare wages and tips",
+      "canonicalPath": "documents[1].fields.box5MedicareWages"
+    },
+    {
+      "pageLabel": "Box 6 - Medicare tax withheld | $",
+      "pageFieldKey": "box 6 medicare tax withheld",
+      "canonicalPath": "documents[1].fields.box6MedicareTaxWithheld"
+    },
+    {
+      "pageLabel": "Box 7 - Social security tips | $",
+      "pageFieldKey": "box 7 social security tips",
+      "canonicalPath": "documents[1].fields.box7SocialSecurityTips"
+    }
+  ]
+}

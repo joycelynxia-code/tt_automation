@@ -1,0 +1,115 @@
+{
+  "createdAt": "2026-06-23T21:04:35.024Z",
+  "url": "https://us-east-2.turbotaxonline.intuit.com/unified/2025/index/tto?uid=13915436423774580&version=436&fepath=%2Ffe%2Fty25usindprod&pyAmend=false&csrc=3468337910&alias=ty25usindprod&currentTaxYear=2025&swimlane=useast2",
+  "context": {
+    "group": "W2",
+    "confidence": 0.95,
+    "reason": "Detected W2 markers; score=4"
+  },
+  "pageSignature": "W2:a19c6c1",
+  "fieldCount": 21,
+  "matches": [
+    {
+      "pageFieldId": "tax_autofill_1782247747282_2_5ebc5f83bfcf88",
+      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID | ##-#######",
+      "canonicalPath": "documents[1].fields.employerEin",
+      "canonicalLabel": "SAMPLE EMPLOYER INC employer Ein",
+      "value": "853309559",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747282_3_56db38cfef7d7",
+      "pageLabel": "Box c - Employer name",
+      "canonicalPath": "documents[1].fields.employerName",
+      "canonicalLabel": "SAMPLE EMPLOYER INC employer Name",
+      "value": "SAMPLE EMPLOYER INC",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747282_7_049f82992d07b8",
+      "pageLabel": "ZIP code",
+      "canonicalPath": "documents[1].fields.employerAddressZip",
+      "canonicalLabel": "SAMPLE EMPLOYER INC employer Address Zip",
+      "value": "95035",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747283_9_a1e2fb974f604",
+      "pageLabel": "State | State | — Select a state —AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyoming",
+      "canonicalPath": "documents[1].fields.stateInfo[0].state",
+      "canonicalLabel": "SAMPLE EMPLOYER INC state",
+      "value": "CA",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747282_5_28a4918c262df",
+      "pageLabel": "Address type | Address type | — Select —U.S. addressMilitary (APO, FPO, or DPO)U.S. territoryForeign country",
+      "canonicalPath": "documents[1].fields.box1Wages",
+      "canonicalLabel": "SAMPLE EMPLOYER INC box1Wages",
+      "value": 21087.17,
+      "confidence": 0.82,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    }
+  ],
+  "fillable": [
+    {
+      "pageFieldId": "tax_autofill_1782247747282_2_5ebc5f83bfcf88",
+      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID | ##-#######",
+      "canonicalPath": "documents[1].fields.employerEin",
+      "canonicalLabel": "SAMPLE EMPLOYER INC employer Ein",
+      "value": "853309559",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747282_3_56db38cfef7d7",
+      "pageLabel": "Box c - Employer name",
+      "canonicalPath": "documents[1].fields.employerName",
+      "canonicalLabel": "SAMPLE EMPLOYER INC employer Name",
+      "value": "SAMPLE EMPLOYER INC",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747282_7_049f82992d07b8",
+      "pageLabel": "ZIP code",
+      "canonicalPath": "documents[1].fields.employerAddressZip",
+      "canonicalLabel": "SAMPLE EMPLOYER INC employer Address Zip",
+      "value": "95035",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747283_9_a1e2fb974f604",
+      "pageLabel": "State | State | — Select a state —AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyoming",
+      "canonicalPath": "documents[1].fields.stateInfo[0].state",
+      "canonicalLabel": "SAMPLE EMPLOYER INC state",
+      "value": "CA",
+      "confidence": 0.99,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782247747282_5_28a4918c262df",
+      "pageLabel": "Address type | Address type | — Select —U.S. addressMilitary (APO, FPO, or DPO)U.S. territoryForeign country",
+      "canonicalPath": "documents[1].fields.box1Wages",
+      "canonicalLabel": "SAMPLE EMPLOYER INC box1Wages",
+      "value": 21087.17,
+      "confidence": 0.82,
+      "source": "heuristic",
+      "reason": "Resolved by heuristic in W2 context"
+    }
+  ]
+}

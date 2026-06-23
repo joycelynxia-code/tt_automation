@@ -1,0 +1,43 @@
+{
+  "mappingId": "page.TAXPAYER:4a7ffd0.435aaf2",
+  "status": "pending",
+  "pageSignature": "TAXPAYER:4a7ffd0",
+  "pageContext": {
+    "group": "TAXPAYER",
+    "confidence": 0.95,
+    "reason": "Detected TAXPAYER markers; score=4"
+  },
+  "createdAt": "2026-06-23T19:22:10.415Z",
+  "matches": [
+    {
+      "pageLabel": "First name",
+      "pageFieldKey": "first name",
+      "canonicalPath": "taxpayer.firstName"
+    },
+    {
+      "pageLabel": "Last name",
+      "pageFieldKey": "last name",
+      "canonicalPath": "taxpayer.lastName"
+    },
+    {
+      "pageLabel": "Date of birth | mm/dd/yyyy",
+      "pageFieldKey": "date of birth mm dd yyyy",
+      "canonicalPath": "taxpayer.birthDate"
+    },
+    {
+      "pageLabel": "Occupation or job title",
+      "pageFieldKey": "occupation or job title",
+      "canonicalPath": "taxpayer.occupation"
+    },
+    {
+      "pageLabel": "Another taxpayer can claim me as a dependent on their tax return. | Uncommon situations | Another taxpayer can claim me as a dependent on their tax return.",
+      "pageFieldKey": "another taxpayer can claim me as a dependent on their tax return uncommon situations another taxpayer can claim me as a dependent on their tax return",
+      "canonicalPath": "taxpayer.canBeClaimedAsDependent"
+    },
+    {
+      "pageLabel": "I was legally blind as of December 31, 2025. | Uncommon situations | I was legally blind as of December 31, 2025.",
+      "pageFieldKey": "i was legally blind as of december 31 2025 uncommon situations i was legally blind as of december 31 2025",
+      "canonicalPath": "taxpayer.isBlind"
+    }
+  ]
+}

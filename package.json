@@ -1,0 +1,24 @@
+{
+  "name": "company-tax-autofill-new-flow",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc --noEmit",
+    "build-canonical": "tsx src/cli/buildCanonical.ts",
+    "build-index": "tsx src/cli/buildIndex.ts",
+    "inspect-index": "tsx src/cli/inspectIndex.ts",
+    "run-client": "tsx src/cli/runClient.ts",
+    "process-client": "tsx src/cli/processClient.ts"
+  },
+  "dependencies": {
+    "@playwright/test": "^1.49.0",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}

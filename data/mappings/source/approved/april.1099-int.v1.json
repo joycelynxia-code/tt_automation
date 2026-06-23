@@ -1,0 +1,42 @@
+{
+  "mappingId": "april.1099-int.v1",
+  "sourceSystem": "april",
+  "documentType": "1099_INT",
+  "status": "approved",
+  "recordType": "array",
+  "sourceRoot": "profile.form_staging_data.interest_income.f1099int_forms[*]",
+  "canonicalDocument": {
+    "type": "1099_INT",
+    "idPrefix": "1099_int",
+    "label": "input_form_addressing_info.issuer.name"
+  },
+  "fields": {
+    "payerName": "input_form_addressing_info.issuer.name",
+    "payerTin": "input_form_addressing_info.issuer.tin_tax_identification_number",
+    "payerAddress.line1": "input_form_addressing_info.issuer.address.address_line_1",
+    "payerAddress.apt": "input_form_addressing_info.issuer.address.apt_number",
+    "payerAddress.city": "input_form_addressing_info.issuer.address.city",
+    "payerAddress.state": "input_form_addressing_info.issuer.address.state",
+    "payerAddress.zip": "input_form_addressing_info.issuer.address.zip_code",
+    "fields.payerName": "input_form_addressing_info.issuer.name",
+    "fields.payerTin": "input_form_addressing_info.issuer.tin_tax_identification_number",
+    "fields.payerAddressLine1": "input_form_addressing_info.issuer.address.address_line_1",
+    "fields.payerAddressCity": "input_form_addressing_info.issuer.address.city",
+    "fields.payerAddressState": "input_form_addressing_info.issuer.address.state",
+    "fields.payerAddressZip": "input_form_addressing_info.issuer.address.zip_code",
+    "fields.box1InterestIncome": "interest_income_amount",
+    "fields.box2EarlyWithdrawalPenalty": "early_withdrawal_penalty_amount",
+    "fields.box3USSavingsBondTreasuryInterest": "interest_us_savings_bond_treasury_obligations_amount",
+    "fields.box4FederalWithholding": "fit_withheld",
+    "fields.box5InvestmentExpenses": "investment_expenses_amount",
+    "fields.box6ForeignTaxPaid": "foreign_tax_paid_amount",
+    "fields.box7ForeignCountryOrPossession": "foreign_country_or_us_possession",
+    "fields.box8TaxExemptInterest": "tax_exempt_interest_amount",
+    "fields.box9SpecifiedPrivateActivityBondInterest": "specified_private_activity_bond_interest_amount",
+    "fields.box10MarketDiscount": "market_discount_amt",
+    "fields.box11BondPremium": "bond_premium_amt",
+    "fields.box12BondPremiumTreasury": "bond_premium_treasury_amt",
+    "fields.box13BondPremiumTaxExempt": "bond_premium_tax_exempt_amt",
+    "fields.taxExemptCusip": "tax_exempt_cusip"
+  }
+}

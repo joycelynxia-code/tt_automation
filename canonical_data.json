@@ -1,0 +1,134 @@
+{
+  "source": {
+    "system": "april",
+    "convertedAt": "2026-06-23T18:22:51.454Z",
+    "anonymized": true,
+    "safeForFiling": false
+  },
+  "taxpayer": {
+    "firstName": "Alex",
+    "lastName": "Appleseed",
+    "middleName": null,
+    "suffix": null,
+    "filingStatus": "SINGLE",
+    "birthDate": "1994-09-23",
+    "ssn": "447865205",
+    "occupation": "Employee",
+    "email": "taxpayer@example.com",
+    "address": {
+      "line1": "1342 Advent Ave",
+      "apt": null,
+      "city": "San Leandro",
+      "state": "CA",
+      "zip": "94549",
+      "county": "STATE_CA_ALAMEDA",
+      "country": "US"
+    },
+    "canBeClaimedAsDependent": false,
+    "isBlind": false,
+    "isMilitary": false
+  },
+  "federal": {
+    "healthCoverageAllYear": true,
+    "priorYearAgi": "97922",
+    "identityProtectionPinUsed": false,
+    "identityProtectionPin": null
+  },
+  "documents": [
+    {
+      "type": "1099_INT",
+      "id": "1099_int_1",
+      "label": "Sample Bank",
+      "fields": {
+        "payerName": "Sample Bank",
+        "payerTin": "105933234",
+        "payerAddressLine1": "PO BOX 951",
+        "payerAddressCity": "HORSHAM",
+        "payerAddressState": "PA",
+        "payerAddressZip": "19044",
+        "box1InterestIncome": 61.82,
+        "box4FederalWithholding": 0
+      },
+      "payerName": "Sample Bank",
+      "payerTin": "105933234",
+      "payerAddress": {
+        "line1": "PO BOX 951",
+        "apt": null,
+        "city": "HORSHAM",
+        "state": "PA",
+        "zip": "19044"
+      }
+    },
+    {
+      "type": "W2",
+      "id": "w2_1",
+      "label": "SAMPLE EMPLOYER INC",
+      "fields": {
+        "employerName": "SAMPLE EMPLOYER INC",
+        "employerEin": "853309559",
+        "employerAddressLine1": "246 N ABEL ST",
+        "employerAddressCity": "MILPITAS",
+        "employerAddressState": "CA",
+        "employerAddressZip": "95035",
+        "box1Wages": 21087.17,
+        "box2FederalWithholding": 1696.37,
+        "box3SocialSecurityWages": 10594.61,
+        "box4SocialSecurityTaxWithheld": 1307.39,
+        "box5MedicareWages": 21087.17,
+        "box6MedicareTaxWithheld": 305.76,
+        "box7SocialSecurityTips": 10492.56,
+        "box8AllocatedTips": 0,
+        "box10DependentCareBenefits": 0,
+        "box11NonqualifiedPlans": 0,
+        "isRetirementPlan": false,
+        "isStatutoryEmployee": false,
+        "isThirdPartySickPay": false,
+        "box14": [
+          {
+            "amount": 253.04,
+            "description": "CASDI"
+          }
+        ],
+        "stateInfo": [
+          {
+            "state_tax_withheld": 348.12,
+            "state_amount": 21087.17,
+            "state": "CA",
+            "issuer_state_id_number": "62117520"
+          }
+        ]
+      },
+      "employerName": "SAMPLE EMPLOYER INC",
+      "employerEin": "853309559",
+      "employerAddress": {
+        "line1": "246 N ABEL ST",
+        "apt": null,
+        "city": "MILPITAS",
+        "state": "CA",
+        "zip": "95035"
+      }
+    }
+  ],
+  "deductionsCredits": {
+    "studentLoanInterestPaid": 144.75,
+    "rothIraContribution": 800,
+    "yearEndRothIraValue": 20288.09,
+    "hasPriorYearRothExcessContributions": false
+  },
+  "state": {
+    "stateNexus": [
+      "CA"
+    ],
+    "primaryResidenceState": "CA",
+    "primaryResidenceCounty": "STATE_CA_ALAMEDA",
+    "california": {
+      "qualifiesForRentersCredit": true,
+      "optedInForHealthcareInfo": false
+    }
+  },
+  "flags": {
+    "is_wages_selected": true,
+    "is_investment_income_selected": true
+  },
+  "unmappedSourceSections": []
+}

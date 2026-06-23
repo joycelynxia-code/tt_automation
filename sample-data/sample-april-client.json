@@ -1,0 +1,133 @@
+{
+  "anonymization_metadata": { "is_anonymized": true, "safe_for_filing": false },
+  "profile": {
+    "household": {
+      "state_nexus": ["CA"],
+      "filing_status": { "federal": "SINGLE" }
+    },
+    "primary": {
+      "basic_info": {
+        "contact_info": { "email_address": "taxpayer@example.com" },
+        "name": {
+          "first_name": "Alex",
+          "last_name": "Appleseed",
+          "middle_name": null,
+          "suffix": null
+        },
+        "age": { "birth_date": "1994-09-23" },
+        "occupation": "Employee",
+        "person_claimed_as_dependent_check": {
+          "is_possible_to_be_claimed_as_dependent_of_another": false
+        },
+        "tax_situation_indicators": { "is_blind": false, "is_military": false },
+        "pin": {
+          "identity_protection_pin": { "is_ip_pin": false, "ip_pin": null },
+          "prior_year_agi": { "federal": { "prior_year_agi": "97922" } }
+        }
+      },
+      "address": {
+        "residency_address": {
+          "country": "US",
+          "apt_number": null,
+          "address_line_1": "1342 Advent Ave",
+          "city": "San Leandro",
+          "zip_code": "94549",
+          "state": "CA",
+          "county": "STATE_CA_ALAMEDA"
+        }
+      },
+      "identification": { "ssn_social_security_number": "447865205" },
+      "affordable_care_act": {
+        "localities": {
+          "all_states": { "is_household_covered_all_year": true },
+          "state_ca": { "is_opted_in_for_healthcare_info": false }
+        }
+      },
+      "residency_info": {
+        "localities": {
+          "state_ca": { "is_qualifying_for_renters_credit": true }
+        }
+      },
+      "student_loans": {
+        "f1098e_form": { "student_loan_interest_paid": 144.75 }
+      },
+      "retirement": {
+        "plan_contributions": {
+          "year_end_roth_ira_amt": 20288.09,
+          "roth_ira_amount": 800,
+          "is_roth_py_excess_contributions": false
+        }
+      },
+      "life_events": {
+        "sections_used": {
+          "is_wages_selected": true,
+          "is_investment_income_selected": true
+        }
+      }
+    },
+    "form_staging_data": {
+      "jobs": [
+        {
+          "w2_info": {
+            "input_form_addressing_info": {
+              "issuer": {
+                "name": "SAMPLE EMPLOYER INC",
+                "address": {
+                  "address_line_1": "246 N ABEL ST",
+                  "apt_number": null,
+                  "city": "MILPITAS",
+                  "state": "CA",
+                  "zip_code": "95035"
+                },
+                "tin_tax_identification_number": "853309559"
+              }
+            },
+            "wages": 21087.17,
+            "fit_withheld": 1696.37,
+            "social_security_wages": 10594.61,
+            "social_security_tax_withheld": 1307.39,
+            "medicare_wages": 21087.17,
+            "medicare_tax_withheld": 305.76,
+            "social_security_tips": 10492.56,
+            "allocated_tips": 0,
+            "dependent_care_benefits": 0,
+            "nonqualified_plans": 0,
+            "is_retirement_plan": false,
+            "is_statutory_employee": false,
+            "is_third_party_sick_pay": false,
+            "state_input_form_info": [
+              {
+                "state_tax_withheld": 348.12,
+                "state_amount": 21087.17,
+                "state": "CA",
+                "issuer_state_id_number": "62117520"
+              }
+            ],
+            "box14_info": [{ "amount": 253.04, "description": "CASDI" }]
+          }
+        }
+      ],
+      "interest_income": {
+        "f1099int_forms": [
+          {
+            "input_form_addressing_info": {
+              "issuer": {
+                "tin_tax_identification_number": "105933234",
+                "name": "Sample Bank",
+                "address": {
+                  "address_line_1": "PO BOX 951",
+                  "apt_number": null,
+                  "city": "HORSHAM",
+                  "state": "PA",
+                  "zip_code": "19044"
+                }
+              }
+            },
+            "interest_income_amount": 61.82,
+            "fit_withheld": 0
+          }
+        ]
+      }
+    }
+  }
+}

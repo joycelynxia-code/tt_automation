@@ -1,0 +1,18 @@
+{
+  "mappingId": "page.TAXPAYER:1ab8ae0.cb132b4",
+  "status": "pending",
+  "pageSignature": "TAXPAYER:1ab8ae0",
+  "pageContext": {
+    "group": "TAXPAYER",
+    "confidence": 0.75,
+    "reason": "Detected TAXPAYER markers; score=1"
+  },
+  "createdAt": "2026-06-23T19:24:04.244Z",
+  "matches": [
+    {
+      "pageLabel": "SSN or ITIN | ###-##-####",
+      "pageFieldKey": "ssn or itin",
+      "canonicalPath": "taxpayer.ssn"
+    }
+  ]
+}
