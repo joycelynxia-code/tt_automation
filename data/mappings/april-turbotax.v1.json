@@ -1,0 +1,262 @@
+{
+  "mappingId": "april-turbotax.v1",
+  "version": "1",
+  "entries": [
+    {
+      "id": "taxpayer_address_city",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "city"
+      ],
+      "aprilPath": "profile.primary.address.residency_address.city",
+      "semanticType": "address",
+      "label": "city"
+    },
+    {
+      "id": "taxpayer_address_country",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "type of mailing address type of mailing address select u s addressmilitary apo fpo or dpo u s territoryforeign country"
+      ],
+      "aprilPath": "profile.primary.address.residency_address.country",
+      "semanticType": "address",
+      "label": "country"
+    },
+    {
+      "id": "taxpayer_address_line1",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "address"
+      ],
+      "aprilPath": "profile.primary.address.residency_address.address_line_1",
+      "semanticType": "address",
+      "label": "address line 1"
+    },
+    {
+      "id": "taxpayer_address_state",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "state state select alabamaalaskaarizonaarkansascaliforniacoloradoconnecticutdelawaredistrict of columbiafloridageorgiahawaiiidahoillinoisindianaiowakansaskentuckylouisianamainemarylandmassachusettsmichiganminnesotamississippimissourimontananebraskanevadanew hampshirenew jerseynew mexiconew yorknorth carolinanorth dakotaohiooklahomaoregonpennsylvaniarhode islandsouth carolinasouth dakotatennesseetexasutahvermontvirginiawashingtonwest virginiawisconsinwyoming",
+        "state state select a state alabamaalaskaarizonaarkansascaliforniacoloradoconnecticutdelawaredistrict of columbiafloridageorgiahawaiiidahoillinoisindianaiowakansaskentuckylouisianamainemarylandmassachusettsmichiganminnesotamississippimissourimontananebraskanevadanew hampshirenew jerseynew mexiconew yorknorth carolinanorth dakotaohiooklahomaoregonpennsylvaniarhode islandsouth carolinasouth dakotatennesseetexasutahvermontvirginiawashingtonwest virginiawisconsinwyoming"
+      ],
+      "aprilPath": "profile.primary.address.residency_address.state",
+      "semanticType": "address",
+      "label": "state"
+    },
+    {
+      "id": "taxpayer_address_zip",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "zip code"
+      ],
+      "aprilPath": "profile.primary.address.residency_address.zip_code",
+      "semanticType": "address",
+      "label": "zip code"
+    },
+    {
+      "id": "taxpayer_birthDate",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "date of birth mm dd yyyy",
+        "date of birth"
+      ],
+      "aprilPath": "profile.primary.basic_info.age.birth_date",
+      "transform": "date_mmddyyyy",
+      "semanticType": "date",
+      "label": "birth date"
+    },
+    {
+      "id": "taxpayer_canBeClaimedAsDependent",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "another taxpayer can claim me as a dependent on their tax return uncommon situations another taxpayer can claim me as a dependent on their tax return"
+      ],
+      "aprilPath": "profile.primary.basic_info.person_claimed_as_dependent_check.is_possible_to_be_claimed_as_dependent_of_another",
+      "transform": "boolean",
+      "semanticType": "boolean",
+      "label": "is possible to be claimed as dependent of another"
+    },
+    {
+      "id": "taxpayer_firstName",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "first name"
+      ],
+      "aprilPath": "profile.primary.basic_info.name.first_name",
+      "semanticType": "name",
+      "label": "first name"
+    },
+    {
+      "id": "taxpayer_isBlind",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "i was legally blind as of december 31 2025 uncommon situations i was legally blind as of december 31 2025"
+      ],
+      "aprilPath": "profile.primary.basic_info.tax_situation_indicators.is_blind",
+      "transform": "boolean",
+      "semanticType": "boolean",
+      "label": "is blind"
+    },
+    {
+      "id": "taxpayer_lastName",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "last name"
+      ],
+      "aprilPath": "profile.primary.basic_info.name.last_name",
+      "semanticType": "name",
+      "label": "last name"
+    },
+    {
+      "id": "taxpayer_occupation",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "occupation or job title"
+      ],
+      "aprilPath": "profile.primary.basic_info.occupation",
+      "label": "occupation"
+    },
+    {
+      "id": "taxpayer_ssn",
+      "pageGroup": "TAXPAYER",
+      "pageFieldKeys": [
+        "ssn or itin"
+      ],
+      "aprilPath": "profile.primary.identification.ssn_social_security_number",
+      "semanticType": "id",
+      "label": "ssn social security number"
+    },
+    {
+      "id": "w2.box1Wages",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 1 wages tips other compensation"
+      ],
+      "aprilPath": "wages",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "amount",
+      "label": "wages"
+    },
+    {
+      "id": "w2.box2FederalWithholding",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 2 federal income tax withheld"
+      ],
+      "aprilPath": "fit_withheld",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "amount",
+      "label": "fit withheld"
+    },
+    {
+      "id": "w2.box3SocialSecurityWages",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 3 social security wages"
+      ],
+      "aprilPath": "social_security_wages",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "amount",
+      "label": "social security wages"
+    },
+    {
+      "id": "w2.box4SocialSecurityTaxWithheld",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 4 social security tax withheld"
+      ],
+      "aprilPath": "social_security_tax_withheld",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "amount",
+      "label": "social security tax withheld"
+    },
+    {
+      "id": "w2.box5MedicareWages",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 5 medicare wages and tips"
+      ],
+      "aprilPath": "medicare_wages",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "amount",
+      "label": "medicare wages"
+    },
+    {
+      "id": "w2.box6MedicareTaxWithheld",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 6 medicare tax withheld"
+      ],
+      "aprilPath": "medicare_tax_withheld",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "amount",
+      "label": "medicare tax withheld"
+    },
+    {
+      "id": "w2.box7SocialSecurityTips",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box 7 social security tips"
+      ],
+      "aprilPath": "social_security_tips",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "other",
+      "label": "social security tips"
+    },
+    {
+      "id": "w2.employerAddressLine1",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "address"
+      ],
+      "aprilPath": "input_form_addressing_info.issuer.address.address_line_1",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "address",
+      "label": "address line 1"
+    },
+    {
+      "id": "w2.employerAddressZip",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "zip code"
+      ],
+      "aprilPath": "input_form_addressing_info.issuer.address.zip_code",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "address",
+      "label": "zip code"
+    },
+    {
+      "id": "w2.employerEin",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box b employer identification number ein or federal id"
+      ],
+      "aprilPath": "input_form_addressing_info.issuer.tin_tax_identification_number",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "id",
+      "label": "tin tax identification number"
+    },
+    {
+      "id": "w2.employerName",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "box c employer name"
+      ],
+      "aprilPath": "input_form_addressing_info.issuer.name",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "address",
+      "label": "name"
+    },
+    {
+      "id": "w2.stateInfo_0__state",
+      "pageGroup": "W2",
+      "pageFieldKeys": [
+        "state state select a state alabamaalaskaarizonaarkansascaliforniacoloradoconnecticutdelawaredistrict of columbiafloridageorgiahawaiiidahoillinoisindianaiowakansaskentuckylouisianamainemarylandmassachusettsmichiganminnesotamississippimissourimontananebraskanevadanew hampshirenew jerseynew mexiconew yorknorth carolinanorth dakotaohiooklahomaoregonpennsylvaniarhode islandsouth carolinasouth dakotatennesseetexasutahvermontvirginiawashingtonwest virginiawisconsinwyoming"
+      ],
+      "aprilPath": "state_input_form_info[0].state",
+      "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+      "semanticType": "id",
+      "label": "state"
+    }
+  ]
+}

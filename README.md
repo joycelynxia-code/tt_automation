@@ -3,19 +3,17 @@
 This starter implements the flow:
 
 ```text
-1. raw client data
+1. raw April client JSON
       ↓
-2. canonical builder
+2. master TurboTax→April mapping dictionary (built once)
       ↓
-3. canonical index
+3. UI fields from TurboTax DOM (Playwright)
       ↓
-4. UI fields from TurboTax DOM
+4. resolveAprilField() — master lookup, then April phrase search fallback
       ↓
-5. resolveField()
+5. filler (Playwright)
       ↓
-6. filler (Playwright)
-      ↓
-7. TurboTax autofill
+6. TurboTax autofill
 ```
 
 ## Install
@@ -26,97 +24,81 @@ npx playwright install chromium
 cp .env.example .env
 ```
 
-## Process a client
+## Phase 1: Build master mapping (once)
 
-Put anonymized April/source JSON at:
-
-```text
-data/raw/client.json
-```
-
-Then run the full conversion:
+Walk through TurboTax once with a sample April JSON. For each page, the tool reads each input's **`data-binding`** attribute (stored as `domHints.turboTaxBinding`) and uses that as the **primary mapping key** to April JSON paths. Label-based matching is a fallback for older entries.
 
 ```bash
-npm run process-client -- data/raw/client.json data/canonical/client
+npm run build-master-mapping -- sample-data/sample-april-client.json
 ```
 
-This writes:
+Output: [`data/mappings/april-turbotax.master.json`](data/mappings/april-turbotax.master.json)
 
-```text
-data/canonical/client.canonical.json
-data/canonical/client.index.json
-```
+Fields without a TurboTax `binding` attribute are skipped during the walk.
 
-Or run the steps separately:
+## Phase 2: Autofill every client
 
 ```bash
-npm run build-canonical -- data/raw/client.json data/canonical/client.canonical.json
-npm run build-index -- data/canonical/client.canonical.json data/index/client.index.json
-npm run inspect-index -- data/index/client.index.json
+npm run run-client -- data/raw/client.json
 ```
 
-## Run TurboTax autofill workflow
+Resolution order for each TurboTax field:
+
+1. **TurboTax binding lookup** — match `data-binding` on the input to `domHints.turboTaxBinding` in the master file (array indices normalized, e.g. `IRSW2.0` → `IRSW2.[*]`)
+2. **Label lookup (fallback)** — match normalized field label against `pageFieldKeys` for legacy entries
+3. **April phrase search fallback** — score field label against all leaf paths in the client's April JSON
+
+Only matches above `AUTOFILL_MIN_CONFIDENCE` (default 0.75) are offered for fill.
+
+## Inspect master mapping
 
 ```bash
-npm run run-client -- data/canonical/client.canonical.json
+npm run inspect-april-mapping
+npm run inspect-april-mapping -- data/mappings/april-turbotax.master.json
 ```
 
-The browser opens. You log in/navigate manually. When on a page to fill, return to the terminal and press Enter.
+## Mapping file format
 
-The tool will:
+```json
+{
+  "id": "IRSW2.[*].EmployerEIN",
+  "pageFieldKeys": ["box b employer identification number ein or federal id"],
+  "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+  "aprilPath": "input_form_addressing_info.issuer.tin_tax_identification_number",
+  "domHints": {
+    "turboTaxBinding": "returns.IRS1040.Return.ReturnData.IRSW2.[*].EmployerEIN",
+    "explicitLabel": "Box b - Employer Identification Number (EIN) or Federal ID",
+    "inputType": "text"
+  }
+}
+```
 
-1. discover visible DOM fields,
-2. detect page context,
-3. resolve UI fields to canonical index entries,
-4. preview matches,
-5. fill only matches above `AUTOFILL_MIN_CONFIDENCE`,
-6. optionally save a pending reusable page mapping.
+For repeating documents (W2, 1099-INT):
 
-## Source mappings
+```json
+{
+  "id": "w2.box1Wages",
+  "pageFieldKeys": ["box 1 wages tips other compensation"],
+  "aprilSourceRoot": "profile.form_staging_data.jobs[*].w2_info",
+  "aprilPath": "wages"
+}
+```
 
-Approved source mappings live in:
+## Pending mapping updates
+
+After a successful autofill run, you can save matches as a pending update:
 
 ```text
-data/mappings/source/approved/
+data/mappings/pending/april-turbotax.<timestamp>.json
 ```
 
-Included:
-
-```text
-april.w2.v1.json
-april.1099-int.v1.json
-```
-
-Unknown source sections are written to:
-
-```text
-data/mappings/source/pending/
-```
-
-Review a candidate, correct it, then move it to `approved/` so future clients use it automatically.
-
-## Page mappings
-
-When a page's matches look correct, choose to save a pending page mapping. It is written to:
-
-```text
-data/mappings/page/pending/
-```
-
-After review, move it to:
-
-```text
-data/mappings/page/approved/
-```
-
-Future matching on that page will use saved mappings before heuristics.
+Review and merge into the master file.
 
 ## Test with sample data
 
 ```bash
-npm run process-client -- sample-data/sample-april-client.json data/canonical/sample
-npm run inspect-index -- data/canonical/sample.index.json
-npm run run-client -- data/canonical/sample.canonical.json
+npm run build-master-mapping -- sample-data/sample-april-client.json
+npm run run-client -- sample-data/sample-april-client.json
 ```
 
 ## Safety
