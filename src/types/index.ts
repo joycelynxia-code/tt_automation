@@ -110,11 +110,8 @@ export type DiscoveredField = {
   tagName: string;
   inputType: string;
   labelText: string;
-  mappingLabel?: string;
-  explicitLabel?: string;
   ariaLabel?: string;
   placeholder?: string;
-  turboTaxBinding?: string;
   name?: string;
   id?: string;
   nearbyText?: string;
@@ -129,50 +126,15 @@ export type PageContext = {
   reason: string;
 };
 
-export type AprilTransform = "date_mmddyyyy" | "boolean";
-
-export type AprilLeafEntry = {
-  path: string;
-  value: Primitive;
-  searchTokens: string[];
-};
-
-export type AprilTurboTaxDomHints = {
-  turboTaxBinding?: string;
-  ariaLabel?: string;
-  explicitLabel?: string;
-  inputType?: string;
-  tagName?: string;
-};
-
-export type AprilTurboTaxEntry = {
-  id: string;
-  pageGroup?: PageGroup;
-  pageFieldKeys?: string[];
-  aprilPath: string;
-  aprilSourceRoot?: string;
-  transform?: AprilTransform;
-  semanticType?: SemanticType;
-  label?: string;
-  domHints?: AprilTurboTaxDomHints;
-};
-
-export type AprilTurboTaxMapping = {
-  mappingId: string;
-  version: string;
-  entries: AprilTurboTaxEntry[];
-};
-
 export type FieldResolution = {
   pageFieldId: string;
   pageLabel: string;
-  mappingId: string;
-  aprilPath: string;
+  canonicalPath: string;
+  canonicalLabel: string;
   value: Primitive;
   confidence: number;
-  source: "binding" | "mapping" | "heuristic" | "april_phrase";
+  source: "saved" | "heuristic" | "ai";
   reason: string;
-  transform?: AprilTransform;
 };
 
 export type PageMapping = {

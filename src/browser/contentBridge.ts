@@ -15,27 +15,14 @@ export async function discoverFields(page: Page): Promise<DiscoveredField[]> {
         const rect = el.getBoundingClientRect();
         return style.display !== "none" && style.visibility !== "hidden" && rect.width > 0 && rect.height > 0;
       }
-      function turboTaxExplicitLabel(el) {
+      function explicitLabel(el) {
         if (el.id) {
           const label = document.querySelector(\`label[for="\${CSS.escape(el.id)}"]\`);
-          if (label) {
-            const textSpan = label.querySelector('[data-automation-id$="-values-0-text"]');
-            if (textSpan && textSpan.textContent) return cleanText(textSpan.textContent);
-            const clone = label.cloneNode(true);
-            clone.querySelectorAll("button, svg, [aria-label='Help']").forEach((node) => node.remove());
-            const text = cleanText(clone.textContent);
-            if (text) return text;
-          }
+          if (label && label.textContent) return cleanText(label.textContent);
         }
         const parentLabel = el.closest("label");
-        if (parentLabel) {
-          const textSpan = parentLabel.querySelector('[data-automation-id$="-values-0-text"]');
-          if (textSpan && textSpan.textContent) return cleanText(textSpan.textContent);
-        }
+        if (parentLabel && parentLabel.textContent) return cleanText(parentLabel.textContent);
         return "";
-      }
-      function readTurboTaxBinding(el) {
-        return cleanText(el.getAttribute("data-binding") || el.getAttribute("binding") || "");
       }
       function nearbyText(el) {
         const parts = [];
@@ -62,22 +49,17 @@ export async function discoverFields(page: Page): Promise<DiscoveredField[]> {
           return true;
         })
         .map((el, index) => {
-          const label = turboTaxExplicitLabel(el);
+          const label = explicitLabel(el);
           const ariaLabel = cleanText(el.getAttribute("aria-label"));
           const placeholder = "placeholder" in el ? cleanText(el.placeholder) : "";
-          const binding = readTurboTaxBinding(el);
           const near = nearbyText(el);
-          const mappingLabel = cleanText(ariaLabel || label || placeholder);
           return {
             fieldId: ensureId(el, index),
             tagName: el.tagName.toLowerCase(),
             inputType: el instanceof HTMLInputElement ? el.type || "text" : el.tagName.toLowerCase(),
-            labelText: cleanText([mappingLabel, near].filter(Boolean).join(" | ")),
-            mappingLabel: mappingLabel || undefined,
-            explicitLabel: label || undefined,
-            ariaLabel: ariaLabel || undefined,
-            placeholder: placeholder || undefined,
-            turboTaxBinding: binding || undefined,
+            labelText: cleanText([label, ariaLabel, placeholder, near].filter(Boolean).join(" | ")),
+            ariaLabel,
+            placeholder,
             name: el.getAttribute("name") ?? undefined,
             id: el.id || undefined,
             nearbyText: near,
@@ -116,32 +98,28 @@ export async function fillFields(page: Page, matches: FieldResolution[]): Promis
       }
       for (const match of matches) {
         const el = document.querySelector(\`[\${FIELD_ATTR}="\${CSS.escape(match.pageFieldId)}"]\`);
-        if (!el) { skipped++; details.push(\`Skipped \${match.aprilPath}: field not found\`); continue; }
-        if (el.disabled) { skipped++; details.push(\`Skipped \${match.aprilPath}: field disabled\`); continue; }
-        if (match.value === null || match.value === undefined) { skipped++; details.push(\`Skipped \${match.aprilPath}: empty value\`); continue; }
+        if (!el) { skipped++; details.push(\`Skipped \${match.canonicalPath}: field not found\`); continue; }
+        if (el.disabled) { skipped++; details.push(\`Skipped \${match.canonicalPath}: field disabled\`); continue; }
+        if (match.value === null || match.value === undefined) { skipped++; details.push(\`Skipped \${match.canonicalPath}: empty value\`); continue; }
         let value = String(match.value);
-        const isBirthDate =
-          match.transform === "date_mmddyyyy" ||
-          match.aprilPath.toLowerCase().includes("birth_date") ||
-          match.aprilPath.toLowerCase().includes("birthdate");
-        if (isBirthDate && /^\\d{4}-\\d{2}-\\d{2}$/.test(value)) {
+        if (match.canonicalPath.toLowerCase().includes("birthdate") && /^\\d{4}-\\d{2}-\\d{2}$/.test(value)) {
           const parts = value.split("-"); value = parts[1] + "/" + parts[2] + "/" + parts[0];
         }
         if (el instanceof HTMLSelectElement) {
-          if (fillSelect(el, value)) { filled++; details.push(\`Filled \${match.pageLabel} <- \${match.aprilPath}\`); }
-          else { skipped++; details.push(\`Skipped \${match.aprilPath}: no select option for \${value}\`); }
+          if (fillSelect(el, value)) { filled++; details.push(\`Filled \${match.pageLabel} <- \${match.canonicalPath}\`); }
+          else { skipped++; details.push(\`Skipped \${match.canonicalPath}: no select option for \${value}\`); }
           continue;
         }
         if (el instanceof HTMLInputElement && ["checkbox", "radio"].includes(el.type)) {
           el.checked = typeof match.value === "boolean" ? match.value : value.toLowerCase() === "true";
           el.dispatchEvent(new Event("change", { bubbles: true }));
-          filled++; details.push(\`Filled \${match.pageLabel} <- \${match.aprilPath}\`); continue;
+          filled++; details.push(\`Filled \${match.pageLabel} <- \${match.canonicalPath}\`); continue;
         }
         if (el instanceof HTMLInputElement || el instanceof HTMLTextAreaElement) {
           setNativeValue(el, value);
-          filled++; details.push(\`Filled \${match.pageLabel} <- \${match.aprilPath}\`); continue;
+          filled++; details.push(\`Filled \${match.pageLabel} <- \${match.canonicalPath}\`); continue;
         }
-        skipped++; details.push(\`Skipped \${match.aprilPath}: unsupported field element\`);
+        skipped++; details.push(\`Skipped \${match.canonicalPath}: unsupported field element\`);
       }
       return { filled, skipped, details };
     })()
