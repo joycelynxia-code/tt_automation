@@ -5,11 +5,11 @@
   "type": "module",
   "scripts": {
     "build": "tsc --noEmit",
-    "build-canonical": "tsx src/cli/buildCanonical.ts",
-    "build-index": "tsx src/cli/buildIndex.ts",
-    "inspect-index": "tsx src/cli/inspectIndex.ts",
+    "build-april-mapping": "tsx src/cli/buildAprilTurboTaxMapping.ts",
+    "build-master-mapping": "tsx src/cli/buildMasterMapping.ts",
+    "inspect-april-mapping": "tsx src/cli/inspectAprilMapping.ts",
     "run-client": "tsx src/cli/runClient.ts",
-    "process-client": "tsx src/cli/processClient.ts"
+    "collect-turbotax-dom": "tsx src/cli/collectTurboTaxDom.ts"
   },
   "dependencies": {
     "@playwright/test": "^1.49.0",

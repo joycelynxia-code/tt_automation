@@ -2,7 +2,7 @@
   "anonymization_metadata": { "is_anonymized": true, "safe_for_filing": false },
   "profile": {
     "household": {
-      "state_nexus": ["CA"],
+      "state_nexus": ["California"],
       "filing_status": { "federal": "SINGLE" }
     },
     "primary": {
@@ -32,7 +32,7 @@
           "address_line_1": "1342 Advent Ave",
           "city": "San Leandro",
           "zip_code": "94549",
-          "state": "CA",
+          "state": "California",
           "county": "STATE_CA_ALAMEDA"
         }
       },
@@ -76,7 +76,7 @@
                   "address_line_1": "246 N ABEL ST",
                   "apt_number": null,
                   "city": "MILPITAS",
-                  "state": "CA",
+                  "state": "California",
                   "zip_code": "95035"
                 },
                 "tin_tax_identification_number": "853309559"
@@ -99,7 +99,7 @@
               {
                 "state_tax_withheld": 348.12,
                 "state_amount": 21087.17,
-                "state": "CA",
+                "state": "California",
                 "issuer_state_id_number": "62117520"
               }
             ],

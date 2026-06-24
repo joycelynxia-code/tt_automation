@@ -1,115 +1,184 @@
 {
-  "createdAt": "2026-06-23T21:04:35.024Z",
-  "url": "https://us-east-2.turbotaxonline.intuit.com/unified/2025/index/tto?uid=13915436423774580&version=436&fepath=%2Ffe%2Fty25usindprod&pyAmend=false&csrc=3468337910&alias=ty25usindprod&currentTaxYear=2025&swimlane=useast2",
-  "context": {
+  "createdAt": "2026-06-24T03:16:42.782Z",
+  "url": "https://us-east-2.turbotaxonline.intuit.com/unified/2025/index/tto?uid=13915436423774580&version=436&fepath=%2Ffe%2Fty25usindprod&pyAmend=false&csrc=3468337910&swimlane=useast2&alias=ty25usindprod&currentTaxYear=2025",
+  "pageHint": {
     "group": "W2",
     "confidence": 0.95,
     "reason": "Detected W2 markers; score=4"
   },
-  "pageSignature": "W2:a19c6c1",
   "fieldCount": 21,
   "matches": [
     {
-      "pageFieldId": "tax_autofill_1782247747282_2_5ebc5f83bfcf88",
-      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID | ##-#######",
-      "canonicalPath": "documents[1].fields.employerEin",
-      "canonicalLabel": "SAMPLE EMPLOYER INC employer Ein",
+      "pageFieldId": "tax_autofill_1782270943981_2_0ecdf79011ffa",
+      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID",
+      "mappingId": "w2.employerEin",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.tin_tax_identification_number",
       "value": "853309559",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping w2.employerEin"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747282_3_56db38cfef7d7",
+      "pageFieldId": "tax_autofill_1782270943982_3_5175230297bf8",
       "pageLabel": "Box c - Employer name",
-      "canonicalPath": "documents[1].fields.employerName",
-      "canonicalLabel": "SAMPLE EMPLOYER INC employer Name",
+      "mappingId": "w2.employerName",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.name",
       "value": "SAMPLE EMPLOYER INC",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping w2.employerName"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747282_7_049f82992d07b8",
+      "pageFieldId": "tax_autofill_1782270943982_4_5bb5c0d1f38ad",
+      "pageLabel": "Employer name line 2 (optional)",
+      "mappingId": "phrase:profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.name",
+      "aprilPath": "profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.name",
+      "value": "Sample Bank",
+      "confidence": 0.99,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_5_90dab30d0c48a8",
+      "pageLabel": "Address type",
+      "mappingId": "phrase:profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.address.address_line_1",
+      "aprilPath": "profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.address.address_line_1",
+      "value": "PO BOX 951",
+      "confidence": 0.99,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_6_33413c04a7b5b",
+      "pageLabel": "Address",
+      "mappingId": "taxpayer_address_line1",
+      "aprilPath": "profile.primary.address.residency_address.address_line_1",
+      "value": "1342 Advent Ave",
+      "confidence": 0.99,
+      "source": "mapping",
+      "reason": "Matched master mapping taxpayer_address_line1"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_7_92bbc9e05a14b",
       "pageLabel": "ZIP code",
-      "canonicalPath": "documents[1].fields.employerAddressZip",
-      "canonicalLabel": "SAMPLE EMPLOYER INC employer Address Zip",
-      "value": "95035",
+      "mappingId": "taxpayer_address_zip",
+      "aprilPath": "profile.primary.address.residency_address.zip_code",
+      "value": "94549",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping taxpayer_address_zip"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747283_9_a1e2fb974f604",
-      "pageLabel": "State | State | — Select a state —AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyoming",
-      "canonicalPath": "documents[1].fields.stateInfo[0].state",
-      "canonicalLabel": "SAMPLE EMPLOYER INC state",
-      "value": "CA",
+      "pageFieldId": "tax_autofill_1782270943982_8_baa01095c755e8",
+      "pageLabel": "City",
+      "mappingId": "taxpayer_address_city",
+      "aprilPath": "profile.primary.address.residency_address.city",
+      "value": "San Leandro",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping taxpayer_address_city"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747282_5_28a4918c262df",
-      "pageLabel": "Address type | Address type | — Select —U.S. addressMilitary (APO, FPO, or DPO)U.S. territoryForeign country",
-      "canonicalPath": "documents[1].fields.box1Wages",
-      "canonicalLabel": "SAMPLE EMPLOYER INC box1Wages",
-      "value": 21087.17,
-      "confidence": 0.82,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "pageFieldId": "tax_autofill_1782270943982_9_38d6cdaa1b41e8",
+      "pageLabel": "State",
+      "mappingId": "phrase:profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.address.state",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.address.state",
+      "value": "California",
+      "confidence": 0.99,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_10_7203cbe98adf88",
+      "pageLabel": "Box d - Control number (optional)",
+      "mappingId": "phrase:profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.address.apt_number",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.address.apt_number",
+      "value": null,
+      "confidence": 0.57,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
     }
   ],
   "fillable": [
     {
-      "pageFieldId": "tax_autofill_1782247747282_2_5ebc5f83bfcf88",
-      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID | ##-#######",
-      "canonicalPath": "documents[1].fields.employerEin",
-      "canonicalLabel": "SAMPLE EMPLOYER INC employer Ein",
+      "pageFieldId": "tax_autofill_1782270943981_2_0ecdf79011ffa",
+      "pageLabel": "Box b - Employer Identification Number (EIN) or Federal ID",
+      "mappingId": "w2.employerEin",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.tin_tax_identification_number",
       "value": "853309559",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping w2.employerEin"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747282_3_56db38cfef7d7",
+      "pageFieldId": "tax_autofill_1782270943982_3_5175230297bf8",
       "pageLabel": "Box c - Employer name",
-      "canonicalPath": "documents[1].fields.employerName",
-      "canonicalLabel": "SAMPLE EMPLOYER INC employer Name",
+      "mappingId": "w2.employerName",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.name",
       "value": "SAMPLE EMPLOYER INC",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping w2.employerName"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747282_7_049f82992d07b8",
+      "pageFieldId": "tax_autofill_1782270943982_4_5bb5c0d1f38ad",
+      "pageLabel": "Employer name line 2 (optional)",
+      "mappingId": "phrase:profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.name",
+      "aprilPath": "profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.name",
+      "value": "Sample Bank",
+      "confidence": 0.99,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_5_90dab30d0c48a8",
+      "pageLabel": "Address type",
+      "mappingId": "phrase:profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.address.address_line_1",
+      "aprilPath": "profile.form_staging_data.interest_income.f1099int_forms[0].input_form_addressing_info.issuer.address.address_line_1",
+      "value": "PO BOX 951",
+      "confidence": 0.99,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_6_33413c04a7b5b",
+      "pageLabel": "Address",
+      "mappingId": "taxpayer_address_line1",
+      "aprilPath": "profile.primary.address.residency_address.address_line_1",
+      "value": "1342 Advent Ave",
+      "confidence": 0.99,
+      "source": "mapping",
+      "reason": "Matched master mapping taxpayer_address_line1"
+    },
+    {
+      "pageFieldId": "tax_autofill_1782270943982_7_92bbc9e05a14b",
       "pageLabel": "ZIP code",
-      "canonicalPath": "documents[1].fields.employerAddressZip",
-      "canonicalLabel": "SAMPLE EMPLOYER INC employer Address Zip",
-      "value": "95035",
+      "mappingId": "taxpayer_address_zip",
+      "aprilPath": "profile.primary.address.residency_address.zip_code",
+      "value": "94549",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping taxpayer_address_zip"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747283_9_a1e2fb974f604",
-      "pageLabel": "State | State | — Select a state —AlabamaAlaskaArizonaArkansasCaliforniaColoradoConnecticutDelawareDistrict of ColumbiaFloridaGeorgiaHawaiiIdahoIllinoisIndianaIowaKansasKentuckyLouisianaMaineMarylandMassachusettsMichiganMinnesotaMississippiMissouriMontanaNebraskaNevadaNew HampshireNew JerseyNew MexicoNew YorkNorth CarolinaNorth DakotaOhioOklahomaOregonPennsylvaniaRhode IslandSouth CarolinaSouth DakotaTennesseeTexasUtahVermontVirginiaWashingtonWest VirginiaWisconsinWyoming",
-      "canonicalPath": "documents[1].fields.stateInfo[0].state",
-      "canonicalLabel": "SAMPLE EMPLOYER INC state",
-      "value": "CA",
+      "pageFieldId": "tax_autofill_1782270943982_8_baa01095c755e8",
+      "pageLabel": "City",
+      "mappingId": "taxpayer_address_city",
+      "aprilPath": "profile.primary.address.residency_address.city",
+      "value": "San Leandro",
       "confidence": 0.99,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "source": "mapping",
+      "reason": "Matched master mapping taxpayer_address_city"
     },
     {
-      "pageFieldId": "tax_autofill_1782247747282_5_28a4918c262df",
-      "pageLabel": "Address type | Address type | — Select —U.S. addressMilitary (APO, FPO, or DPO)U.S. territoryForeign country",
-      "canonicalPath": "documents[1].fields.box1Wages",
-      "canonicalLabel": "SAMPLE EMPLOYER INC box1Wages",
-      "value": 21087.17,
-      "confidence": 0.82,
-      "source": "heuristic",
-      "reason": "Resolved by heuristic in W2 context"
+      "pageFieldId": "tax_autofill_1782270943982_9_38d6cdaa1b41e8",
+      "pageLabel": "State",
+      "mappingId": "phrase:profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.address.state",
+      "aprilPath": "profile.form_staging_data.jobs[0].w2_info.input_form_addressing_info.issuer.address.state",
+      "value": "California",
+      "confidence": 0.99,
+      "source": "april_phrase",
+      "reason": "Matched April path by phrase similarity"
     }
   ]
 }
